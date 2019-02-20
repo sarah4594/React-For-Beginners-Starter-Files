@@ -1,5 +1,4 @@
 import React from 'react'
-import { STATUS_CODES } from 'http'
 
 class StorePicker extends React.Component {
   render() {
