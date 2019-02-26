@@ -10,8 +10,7 @@ class StorePicker extends React.Component {
           type="text"
           required
           placeholder="Store Name"
-          deafult
-          value={getFunName()}
+          defaultValue={getFunName()}
         />
         <button type="sumbit">Visit Store</button>
       </form>
