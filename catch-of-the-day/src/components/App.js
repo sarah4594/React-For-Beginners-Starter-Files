@@ -18,6 +18,18 @@ class App extends React.Component {
       context: this,
       state: 'fishes'
     })
+    const orderJson = localStorage.getItem(`order-${params.storeId}`)
+    if (orderJson) {
+      this.setState({ order: JSON.parse(orderJson) })
+    }
+  }
+
+  componentDidUpdate() {
+    const { params } = this.props.match
+    localStorage.setItem(
+      `order-${params.storeId}`,
+      JSON.stringify(this.state.order)
+    )
   }
 
   componentWillUnmount() {
