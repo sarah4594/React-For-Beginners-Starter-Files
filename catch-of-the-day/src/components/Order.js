@@ -29,7 +29,11 @@ class Order extends React.Component {
         <li key={key}>
           <span>
             <TransitionGroup component="span" className="count">
-              <CSSTransition {...transitionOptions}>
+              <CSSTransition
+                classNames="count"
+                key={count}
+                timeout={{ enter: 500, exit: 500 }}
+              >
                 <span>{count}</span>
               </CSSTransition>
             </TransitionGroup>
